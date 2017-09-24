@@ -21,7 +21,8 @@
       <br>
       <nav>
         <ul class="nav justify-content-center">
-          <div class="logo--main"><img src="/assets/images/logo-the-regulars.png" alt="The Regulars logo" float-left; height= 61px width= 160px />
+          <div class="logo--main">
+            <img src="/assets/images/logo-the-regulars.png" alt="The Regulars logo" height="61px"; width="160px" />
           </div>
           <li class="nav-item">
             <button type="button" class="btn btn-primary" id="register" data-toggle="modal" data-target="#registerModal">
@@ -51,6 +52,160 @@
         </ul>
       </nav>
       <br>
+
+      <!-- REGISTER MODAL -->
+        <div class="container">
+          <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="registerModalLabel">Sign Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-9 push-md-3 offset-md-3">
+                        <form id="registration" class="form-register"><p>Sign up for a Regulars account.</p>
+                            <div class="input-group">
+                              <label for="password"> Email </label>
+                                <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="Username" aria-describedby="sizing-addon2">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                              <label for="password"> Password </label>
+                              <input type="password" class="form-control" name="credentials[password]" placeholder="password">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                              <label for="password-confirm"> Confirm Password </label>
+                              <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm password">
+                            </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="modal-footer-reg">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <input type="submit" class="btn btn-info submit" name="submit" value="Register">
+                      </div>
+                        <div id="signUpSuccess"></div>
+                        <div id="errorMessageModalSignUp"></div>
+                      </form>
+                    <br>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div><!-- REGISTER MODAL END -->
+
+<!-- LOGIN MODAL -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Log In</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGOUT MODAL -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="logoutModalLabel">Log Out</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Log Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MY ACCOUNT MODAL -->
+<div class="modal fade" id="myAccountModal" tabindex="-1" role="dialog" aria-labelledby="myAccountModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myAccountModalLabel">My Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <br>
+      <div class="modal-body">
+        <form id="passChange">
+          <p> Change Password </p>
+          <br>
+          <div class="input-group">
+            <label for="oldPassword"> Old Password </label>
+            <input type="password" class="form-control" name="passwords[old]" placeholder="old password">
+          </div>
+          <br>
+          <div class="input-group">
+            <label for="newPassword"> New Password </label>
+            <input type="password" class="form-control" name="passwords[new]" placeholder="new password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer-changepwd">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Change Password</button>
+      </div>
+      <br>
+      <!-- </div> -->
+      <div id="reset-success"></div>
+      <div id="reset-fail"></div>
+      <br>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ABOUT MODAL -->
+<div class="modal fade" id="aboutModalLong" tabindex="-1" role="dialog" aria-labelledby="aboutModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLongTitle">About Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>About The Regulars</h5>
+        <p>Ever wish for ....</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- CAROUSEL -->
       <div class="container">
