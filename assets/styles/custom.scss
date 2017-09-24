@@ -1,0 +1,23 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+// font-family: 'Syncopate', sans-serif;
+// font-family: 'Martel', serif
+
+.btn-primary {
+  font-family: 'Martel', serif;
+  color: #000;
+  font-weight: bolder;
+  background-color: #fff;
+  border-color: #fff;
+  margin: 5px
+}
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #ff5146;
+  border-color: #ff5146
+}
+
+#register {
+  margin-left: 50px;
+}
